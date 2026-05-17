@@ -47,8 +47,7 @@ if ( ! function_exists( 'businessx_post_options_box' ) ) {
 /*  Save meta info
 /* ------------------------------------ */
 if ( ! function_exists( 'businessx_post_options_save' ) ) {
-	function businessx_post_options_save() {
-		global $post;
+	function businessx_post_options_save( $post_id ) {
 
 		// Verify some credentials
 		if ( ! isset( $_POST[ 'businessx_post_hide_sidebar_nonce' ] ) ||
@@ -58,14 +57,14 @@ if ( ! function_exists( 'businessx_post_options_save' ) ) {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return;
 
-		if ( ! current_user_can( 'edit_post', $post->ID ) )
+		if ( ! current_user_can( 'edit_post', $post_id ) )
 			return;
 
 		// Check defaults
 		$hide_sidebar = ! empty( $_POST[ 'businessx_post_hide_sidebar_meta' ] ) ? 1 : 0;
 
 		// Update meta info
-		update_post_meta( $post->ID, 'businessx_single_hide_sidebar', absint( $hide_sidebar ) );
+		update_post_meta( $post_id, 'businessx_single_hide_sidebar', absint( $hide_sidebar ) );
 
 		do_action( 'businessx_post_options_save__action' );
 

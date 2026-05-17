@@ -858,4 +858,3 @@ if ( ! function_exists( 'businessx_dismiss_ext_action' ) ) {
     }
 }
 add_action( 'wp_ajax_businessx_dismiss_ext', 'businessx_dismiss_ext_action' );
-add_action( 'wp_ajax_nopriv_businessx_dismiss_ext', 'businessx_dismiss_ext_action' );

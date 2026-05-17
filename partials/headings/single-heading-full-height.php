@@ -23,7 +23,7 @@
         <?php do_action( 'businessx_shfh__info_middle' ); ?>
         <?php if( ! get_theme_mod( 'posts_single_comments_nr', false ) ) : ?>
         <ul class="entry-meta-list eml-right clearfix">
-			<li><span class="fs-medium"><?php businessx_icon( 'comments' ); ?><a href="<?php esc_url( comments_link() ) ?>"><?php comments_number(); ?></a></span></li>
+			<li><span class="fs-medium"><?php businessx_icon( 'comments' ); ?><a href="<?php echo esc_url( get_comments_link() ); ?>"><?php comments_number(); ?></a></span></li>
 		</ul><?php endif; ?>
         <?php do_action( 'businessx_shfh__info_bottom' ); ?>
 	</div>

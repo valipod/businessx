@@ -13,7 +13,7 @@ businessx_controller_select(
 	) ),
 	__( 'Logo type:', 'businessx' ),
 	__( 'Select whether to use a custom logo or your site title. If a logo is not selected, the text one is displayed.', 'businessx' ),
-	apply_filters( 'businessx_option___logo_type_select_default', 'logo-text-type' ), false, 'sanitize_text_field', 5 );
+	apply_filters( 'businessx_option___logo_type_select_default', 'logo-text-type' ), false, 'businessx_sanitize_select', 5 );
 
 // Show logo on scroll
 businessx_controller_checkbox(
@@ -37,4 +37,4 @@ businessx_controller_select(
 	) ),
 	__( 'Sticky Logo Height', 'businessx' ),
 	__( 'Logo height on scroll, works only if the above option is on and the logo is and image. The value is represented in EM units', 'businessx' ),
-	apply_filters( 'businessx_option___sticky_logo_height_default', '2em' ), true, 'sanitize_text_field', 3 );
+	apply_filters( 'businessx_option___sticky_logo_height_default', '2em' ), true, 'businessx_sanitize_select', 3 );

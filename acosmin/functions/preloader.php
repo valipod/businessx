@@ -223,7 +223,7 @@ if ( ! function_exists( 'businessx_preloader_output_css' ) ) {
 
 		// Preloader CSS Output
 		?>
-		<style type="text/css"> .bx-preloader div#bx-preloader { position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; overflow: visible; background-color: rgba(<?php esc_attr( businessx_hex2rgba( $bg, $op, false ) ) ?>); }
+		<style type="text/css"> .bx-preloader div#bx-preloader { position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; overflow: visible; background-color: rgba(<?php echo esc_attr( businessx_hex2rgba( $bg, $op, true ) ); ?>); }
 		<?php
 		echo businessx_sanitize_css( $preloader ); ?> </style>
 		<?php
