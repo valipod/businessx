@@ -13,7 +13,7 @@
  *  Define some constants
 /* ------------------------------------ */
 if( ! defined( 'BUSINESSX_VERSION' ) ) {
-	define( 'BUSINESSX_VERSION', '1.0.5.8' ); }
+	define( 'BUSINESSX_VERSION', '1.0.6.7' ); }
 
 if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_URL', '//www.acosmin.com/' ); }
