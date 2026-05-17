@@ -4882,6 +4882,19 @@ input:disabled {
 	}
 }
 /* END Small screens */
+
+/* Slider mobile height — override the 53em set above so landscape images
+   fill the slide width rather than showing only a center strip */
+@media only screen and (max-width: 40em) {
+	.sec-slider-slide {
+		height: 22em; /* ~308px at 14px base; ~70% of image width visible vs ~36% before */
+	}
+}
+@media only screen and (max-width: 28em) {
+	.sec-slider-slide {
+		height: 27em; /* ~297px at 11px base; keeps consistent pixel height on tiny phones */
+	}
+}
 /* ------------------ */
 
 
