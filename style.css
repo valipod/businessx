@@ -4884,6 +4884,13 @@ input:disabled {
 /* END Small screens */
 /* ------------------ */
 
+/* Slider mobile height — vh overrides any inline height set by Owl Carousel JS */
+@media only screen and (max-width: 40em) {
+	.sec-slider-slide {
+		height: 85vh !important;
+	}
+}
+
 
 
 /* Medium screens */
